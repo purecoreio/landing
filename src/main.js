@@ -3,9 +3,10 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import router from './router'
 import vBlur from 'v-blur'
+import VueRellax from 'vue-rellax'
 
 Vue.config.productionTip = false
-
+Vue.use(VueRellax)
 
 Vue.use(vBlur, {
   opacity: 0.2,

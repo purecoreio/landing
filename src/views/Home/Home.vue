@@ -1,11 +1,14 @@
 <template>
-  <div>
+  <div style="overflow: hidden">
     <v-sheet>
       <v-container style="max-width: 900px; padding-top: 150px; padding-bottom: 150px">
-        <v-row no-gutters>
-          <v-col cols="12">
+        <v-row no-gutters align="center">
+          <v-col cols="12" md="6">
             <h1>purecore</h1>
             <h3>the global data processor for the gaming industry</h3>
+          </v-col>
+          <v-col cols="6" v-if="$vuetify.breakpoint.mdAndUp" align="right">
+            <v-img contain width="80px" src="../../assets/logo/transparent.png"/>
           </v-col>
         </v-row>
       </v-container>
@@ -25,7 +28,7 @@
             <v-list-item-title>
               <h2>purecore it's (usually) free!</h2>
             </v-list-item-title>
-            <v-list-item-subtitle>we know, it's hard to belive</v-list-item-subtitle>
+            <v-list-item-subtitle>we know, it's hard to believe</v-list-item-subtitle>
           </v-list-item-content>
           <v-list-item-action>
             <v-btn text>Check Api Rates</v-btn>

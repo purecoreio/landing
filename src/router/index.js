@@ -11,6 +11,16 @@ const routes = [
     component: Home
   },
   {
+    path: '/features/billing',
+    name: 'payperuse',
+    component: () => import('../views/Features/PayPerUse.vue')
+  },
+  {
+    path: '/features/grs',
+    name: 'grs',
+    component: () => import('../views/Features/PunishmentSystem.vue')
+  },
+  {
     path: '/quiquelhappy',
     name: 'todo',
     // route level code-splitting

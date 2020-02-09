@@ -77,7 +77,13 @@
       </template>
     </v-app-bar>
     <v-content style="overflow-x: hidden">
-      <transition name="fade">
+      <transition
+        mode="out-in"
+        @beforeLeave="beforeLeave"
+        @enter="enter"
+        @afterEnter="afterEnter"
+        name="fade"
+      >
         <router-view />
       </transition>
     </v-content>
@@ -98,6 +104,21 @@ export default {
   methods: {
     goTo: function(val) {
       this.$router.push(val);
+    },
+    beforeLeave(element) {
+      this.prevHeight = getComputedStyle(element).height;
+    },
+    enter(element) {
+      const { height } = getComputedStyle(element);
+
+      element.style.height = this.prevHeight;
+
+      setTimeout(() => {
+        element.style.height = height;
+      });
+    },
+    afterEnter(element) {
+      element.style.height = "auto";
     }
   },
   beforeRouteUpdate(to, from, next) {
@@ -119,41 +140,41 @@ export default {
               name: "Pay-per-use",
               description:
                 "Cloud-like billing, you don't need to pay if you don't use it",
-              link: "quiquelhappy"
+              link: "/features/billing"
             },
             {
               name: "Punishment system",
               description: "Smart and fair punishment system",
-              link: "quiquelhappy"
+              link: "/features/grs"
             },
             {
               name: "Object-based store",
               description:
                 "Your store items are a list of perks, not a list of text",
-              link: "quiquelhappy"
+              link: "/quiquelhappy"
             },
             {
               name: "Rich forum system",
               description:
                 "Subcomment threads, reactions and discord integration",
-              link: "quiquelhappy"
+              link: "/quiquelhappy"
             },
             {
               name: "Web hosting",
               description: "Vue.js web hosting with module webstore",
-              link: "quiquelhappy"
+              link: "/quiquelhappy"
             },
             {
               name: "Game Hosting",
               description:
                 "Dedicated cores billed per hour or self-hosted supervisor",
-              link: "quiquelhappy"
+              link: "/quiquelhappy"
             },
             {
               name: "Powerful analytics",
               description:
                 "Geolocation, .xls exporting and detailed action registry",
-              link: "quiquelhappy"
+              link: "/quiquelhappy"
             }
           ]
         },
@@ -164,27 +185,27 @@ export default {
             {
               name: "Friends API",
               description: "Connection node API",
-              link: "quiquelhappy"
+              link: "/quiquelhappy"
             },
             {
               name: "Forums API",
               description: "Rich forum api",
-              link: "quiquelhappy"
+              link: "/quiquelhappy"
             },
             {
               name: "Store API",
               description: "Modular store api",
-              link: "quiquelhappy"
+              link: "/quiquelhappy"
             },
             {
               name: "Machine API",
               description: "Supervisor Docker interface",
-              link: "quiquelhappy"
+              link: "/quiquelhappy"
             },
             {
               name: "Instance API",
               description: "Instance data api",
-              link: "quiquelhappy"
+              link: "/quiquelhappy"
             }
           ]
         },
@@ -195,7 +216,7 @@ export default {
             {
               name: "Discord",
               description: "Chat with others",
-              link: "community"
+              link: "/community"
             }
           ]
         },
@@ -206,7 +227,7 @@ export default {
             {
               name: "Rates",
               description: "This service is mostly free",
-              link: "quiquelhappy"
+              link: "/quiquelhappy"
             }
           ]
         }
@@ -223,9 +244,13 @@ export default {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.2s;
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-enter,
+.fade-leave-active {
   opacity: 0;
 }
 </style>
