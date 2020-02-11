@@ -88,10 +88,26 @@
       </transition>
     </v-content>
     <v-footer padless color="primary" dark>
-      <v-col class="text-center" cols="12">
-        2019 / {{ new Date().getFullYear() }} —
-        <strong>quiquelhappy</strong>
-      </v-col>
+      <v-row justify="center" no-gutters>
+        <v-col cols="12">
+          <v-sheet color="primary darken-1">
+            <v-container style="max-width: 900px">
+              <v-row>
+                <v-col v-for="(section,i) in footerNavigation" :key="i">
+                  <center>
+                    <h3>{{section.name}}</h3>
+                  </center>
+                  <v-btn :to="link.link" block text v-for="(link,i) in section.links" :key="i">{{link.name}}</v-btn>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-sheet>
+        </v-col>
+        <v-col class="text-center pa-5" cols="12">
+          2019 / {{ new Date().getFullYear() }} —
+          <strong>quiquelhappy</strong>
+        </v-col>
+      </v-row>
     </v-footer>
   </v-app>
 </template>
@@ -130,6 +146,50 @@ export default {
   data() {
     return {
       drawer: null,
+      footerNavigation: [
+        {
+          name: "Legal",
+          description: "Legal boring stuff",
+          links: [
+            {
+              name: "Privacy Notice",
+              description: "Privacy Notice",
+              link: "/legal/privacy"
+            },
+            {
+              name: "Cookies",
+              description: "Cookie policy",
+              link: "/legal/cookies"
+            },
+            {
+              name: "Website Terms",
+              description: "Website Terms",
+              link: "/legal/terms/website"
+            },
+            {
+              name: "Service Terms",
+              description: "Service Terms",
+              link: "/legal/terms/service"
+            }
+          ]
+        },
+        {
+          name: "Contact",
+          description: "Contact",
+          links: [
+            {
+              name: "Discord",
+              description: "Discord link",
+              link: "/community"
+            },
+            {
+              name: "Dev Support",
+              description: "Donation link",
+              link: "/quiquelhappy"
+            }
+          ]
+        }
+      ],
       navigation: [
         {
           name: "Features",

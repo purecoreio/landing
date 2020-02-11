@@ -42,7 +42,7 @@
         <v-row style="height: 100%" align="center">
           <v-col cols="12">
             <h1 style="font-size: 1000%" v-rellax="{speed:0.8}">$0</h1>
-            <h1 v-if="$vuetify.breakpoint.mdAndUp" style="font-size: 800%" v-rellax="{speed:2}">Better than anyone else</h1>
+            <h1 v-if="$vuetify.breakpoint.mdAndUp" style="font-size: 800%" v-rellax="{speed:2.2}">Better than anyone else</h1>
             <h1 v-if="$vuetify.breakpoint.smAndDown" style="font-size: 200%" v-rellax="{speed:0.8}">Better than anyone else</h1>
           </v-col>
         </v-row>

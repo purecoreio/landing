@@ -11,6 +11,26 @@ const routes = [
     component: Home
   },
   {
+    path: '/legal/privacy',
+    name: 'privacy',
+    component: () => import('../views/Legal/Privacy.vue')
+  },
+  {
+    path: '/legal/cookies',
+    name: 'cookies',
+    component: () => import('../views/Legal/Cookies.vue')
+  },
+  {
+    path: '/legal/terms/website',
+    name: 'websiteterms',
+    component: () => import('../views/Legal/WebsiteTerms.vue')
+  },
+  {
+    path: '/legal/terms/service',
+    name: 'websiteterms',
+    component: () => import('../views/Legal/ServiceTerms.vue')
+  },
+  {
     path: '/features/billing',
     name: 'payperuse',
     component: () => import('../views/Features/PayPerUse.vue')
