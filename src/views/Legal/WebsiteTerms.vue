@@ -1,5 +1,5 @@
 <template>
-  <v-container style="max-width: 900px">
+  <v-container style="max-width: 1000px; margin-top:70px">
     <h1 class="text-dark h3">General Terms and Conditions</h1>
     <ol>
       <li>We reserve the right to terminate your account if any offensive/phishing/plagiarized content is found.</li>

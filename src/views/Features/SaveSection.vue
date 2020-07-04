@@ -1,6 +1,6 @@
 <template>
   <v-sheet style="overflow: hidden" :color="bgcolor">
-    <v-container class="pt-10 pb-10" style="max-width: 900px">
+    <v-container class="pt-10 pb-10" style="max-width: 1000px">
       <v-row align="center">
         <v-col cols="12" md="6">
           <h2>{{feature}}</h2>

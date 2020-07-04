@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-sheet tile dark color="primary" style="height: 300px">
-      <v-container style="max-width: 900px; height: 100%">
+      <v-container style="max-width: 1000px; height: 100%">
         <v-row style="height: 100%" align="center">
           <v-col cols="12" md="6">
             <h1>You don't use it?</h1>
@@ -16,7 +16,7 @@
       </v-container>
     </v-sheet>
     <v-sheet tile dark color="primary darken-1">
-      <v-container style="max-width: 900px; height: 100%">
+      <v-container style="max-width: 1000px; height: 100%">
         <v-row align="center">
           <v-col cols="6" md="9">
             <h4>purecore usage is mostly free, you can check out the api rates anytime on the pricing section</h4>
@@ -38,7 +38,7 @@
       />
     </div>
     <v-sheet class="pt-12" style="overflow:hidden" height="600px" tile dark color="primary">
-      <v-container style="max-width: 900px; height: 100%">
+      <v-container style="max-width: 1000px; height: 100%">
         <v-row style="height: 100%" align="center">
           <v-col cols="12">
             <h1 style="font-size: 1000%" v-rellax="{speed:0.8}">$0</h1>

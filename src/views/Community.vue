@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-sheet color="primary" class="pt-5 pb-5" dark tile>
+    <v-sheet color="primary" class="pt-5 pb-5" style="margin-top:60px" dark tile>
       <v-row s align="center">
         <v-col cols="12">
           <center>
@@ -17,7 +17,7 @@
     </v-sheet>
     <v-sheet color="grey lighten-4">
       <v-content>
-        <v-container style="max-width: 900px">
+        <v-container style="max-width: 1000px">
           <v-row align="center">
             <v-col cols="12" md="6">
               <iframe
@@ -39,9 +39,9 @@
         </v-container>
       </v-content>
     </v-sheet>
-    <v-sheet class="pb-12" color="grey lighten-3">
+    <v-sheet class="pt-12 pb-12" color="grey lighten-3">
       <v-content>
-        <v-container style="max-width: 900px">
+        <v-container style="max-width: 1000px">
           <center>
             <h1>Want to support?</h1>
             <v-btn

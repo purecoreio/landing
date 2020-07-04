@@ -1,5 +1,5 @@
 <template>
-  <v-container style="max-width: 900px">
+  <v-container style="max-width: 1000px; margin-top:70px">
     <h1>Welcome to our Privacy Policy</h1>
     <h3>Your privacy is critically important to us.</h3>
 

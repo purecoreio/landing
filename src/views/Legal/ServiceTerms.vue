@@ -1,5 +1,5 @@
 <template>
-  <v-container style="max-width: 900px">
+  <v-container style="max-width: 1000px; margin-top:70px">
     <div>
       <h1>
         purecore Terms and Conditions Of Supply ("

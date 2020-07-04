@@ -1,5 +1,5 @@
 <template>
-  <v-container style="max-width: 900px">
+  <v-container style="max-width: 1000px; margin-top:70px">
     <h1>Cookie Policy for purecore</h1>
 
     <p>This is the Cookie Policy for purecore, accessible from https://purecore.io/</p>

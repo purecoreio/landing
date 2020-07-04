@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div style="height:300px; position: relative">
+    <div style="height:400px; position: relative">
       <VueMatrixRaindrop
-        :canvasHeight="200"
+        :canvasHeight="300"
         :canvasWidth="width"
         :speed="2"
         textColor="#448aff"
@@ -32,7 +32,7 @@
       </v-row>
     </div>
     <div>
-      <v-container style="max-width: 600px">
+      <v-container style="max-width: 600px; transform: translateY(-50px)">
         <v-list color="transparent">
           <v-card v-for="feature in featureList" :key="feature.name" class="pa-4 mb-4" hover>
             <v-list-item>

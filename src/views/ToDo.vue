@@ -1,7 +1,7 @@
 <template>
   <v-content>
-    <v-container style="max-width: 900px">
-      <div class="pt-10 pb-10">
+    <v-container style="max-width: 1000px">
+      <div style="margin-top:100px" class="pb-10">
         <v-row align="center">
           <v-col cols="12" md="6">
             <h1>Coding this is exhausting</h1>
