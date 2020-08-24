@@ -41,6 +41,16 @@ const routes = [
     component: () => import('../views/Features/PunishmentSystem.vue')
   },
   {
+    path: '/analytics',
+    name: 'analytics',
+    component: () => import('../views/Features/Analytics.vue')
+  },
+  {
+    path: '/monetization',
+    name: 'Monetization',
+    component: () => import('../views/Features/Monetization.vue')
+  },
+  {
     path: '*',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

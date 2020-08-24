@@ -2,10 +2,9 @@
   <marquee-text :repeat="3" :duration="250">
     <v-img
       width="120"
-      height="100"
       contain
-      class="mr-12"
-      style="display:inline-block"
+      :class="shadow != null && shadow == true ? 'mr-12 elevation-7' : 'mr-12'"
+        style="display:inline-block; border-radius:14px"
       v-for="(img, i) in pm"
       :key="i"
       :src="require(`../assets/pm/${img}`)"
@@ -18,7 +17,7 @@ export default {
   components: {
     MarqueeText,
   },
-  props: ["pm"],
+  props: ["pm","shadow"],
 };
 </script>
 <style scoped lang="css">

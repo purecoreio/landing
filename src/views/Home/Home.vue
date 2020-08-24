@@ -59,31 +59,7 @@
         >
           <v-row align="center" justify="center">
             <v-col>
-              <marquee-text class="mb-10" :duration="250">
-                <v-img
-                  width="120"
-                  height="100"
-                  contain
-                  class="mr-12"
-                  style="display:inline-block"
-                  v-for="(img, i) in pm[0]"
-                  :key="i"
-                  :src="require(`../../assets/pm/${img}`)"
-                />
-              </marquee-text>
-              <marquee-text-rev :pm="pm[1]" :duration="250" />
-              <marquee-text class="mt-10" :duration="250">
-                <v-img
-                  width="120"
-                  height="100"
-                  contain
-                  class="mr-12"
-                  style="display:inline-block"
-                  v-for="(img, i) in pm[2]"
-                  :key="i"
-                  :src="require(`../../assets/pm/${img}`)"
-                />
-              </marquee-text>
+              <payment-gateways />
             </v-col>
           </v-row>
         </v-container>
@@ -125,31 +101,7 @@
     >
       <v-row align="center" justify="center">
         <v-col>
-          <marquee-text class="mb-10" :duration="250">
-            <v-img
-              width="120"
-              height="100"
-              contain
-              class="mr-12"
-              style="display:inline-block"
-              v-for="(img, i) in pm[0]"
-              :key="i"
-              :src="require(`../../assets/pm/${img}`)"
-            />
-          </marquee-text>
-          <marquee-text-rev :pm="pm[1]" :duration="250" />
-          <marquee-text class="mt-10" :duration="250">
-            <v-img
-              width="120"
-              height="100"
-              contain
-              class="mr-12"
-              style="display:inline-block"
-              v-for="(img, i) in pm[2]"
-              :key="i"
-              :src="require(`../../assets/pm/${img}`)"
-            />
-          </marquee-text>
+          <payment-gateways />
         </v-col>
       </v-row>
     </v-container>
@@ -159,14 +111,12 @@
 <script>
 // @ is an alias to /src
 import VueApexCharts from "vue-apexcharts";
-import MarqueeText from "vue-marquee-text-component";
-import MarqueeTextRev from "../../components/MarqueeRev";
+import PaymentGateways from "../../components/PaymentGateways";
 
 export default {
   components: {
     apexchart: VueApexCharts,
-    MarqueeText,
-    MarqueeTextRev,
+    PaymentGateways,
   },
   name: "home",
   methods: {
@@ -239,76 +189,10 @@ export default {
     },
   },
   mounted() {
-    const result = new Array(Math.ceil(this.pms.length / 3))
-      .fill()
-      .map(() => this.pms.splice(0, this.pms.length / 3));
-    this.pm[0] = result[0];
-    this.pm[1] = result[1];
-    this.pm[2] = result[2];
   },
   data() {
     return {
       hoverAnalytics: false,
-      pms: [
-        "ABNANL2A.svg",
-        "amex-alt.svg",
-        "amex.svg",
-        "anwbgiftcard.svg",
-        "applepay.svg",
-        "paypal.svg",
-        "ASNBNL21.svg",
-        "bancontact.svg",
-        "banktransfer.svg",
-        "belfius.svg",
-        "BUNQNL2A.svg",
-        "cartasi.svg",
-        "cartebancaire.svg",
-        "creditcard.svg",
-        "deberencadeaukaart.svg",
-        "directdebit.svg",
-        "eps.svg",
-        "eyegiftcard.svg",
-        "fashioncheque.svg",
-        "FVLBNL22.svg",
-        "giftcard.svg",
-        "giropay.svg",
-        "HANDNL2A.svg",
-        "ideal.svg",
-        "inghomepay.svg",
-        "kbc.svg",
-        "klarna.svg",
-        "KNABNL2H.svg",
-        "kunstencultuurcadeaukaart.svg",
-        "maestro.svg",
-        "mastercard.svg",
-        "MOYONL21.svg",
-        "mybank.svg",
-        "Nationale-golfbon_32x24.svg",
-        "nationalebioscoopbon.svg",
-        "nationaleentertainmentcard.svg",
-        "paysafecard.svg",
-        "podiumcadeaukaart.svg",
-        "Przelewy24.svg",
-        "RABONL2U.svg",
-        "RBRBNL21.svg",
-        "SNSBNL2A.svg",
-        "sofort.svg",
-        "sportenfit.svg",
-        "travelcheq.svg",
-        "TRIONL2U.svg",
-        "visa.svg",
-        "vpay.svg",
-        "vvvgiftcard-dinercheque.svg",
-        "vvvgiftcard-lekkerweg.svg",
-        "vvvgiftcard.svg",
-        "webshopgiftcard.svg",
-        "yourgift.svg",
-      ],
-      pm: {
-        0: [],
-        1: [],
-        2: [],
-      },
       optionsSmall: {
         colors: ["#448aff"],
         chart: {
