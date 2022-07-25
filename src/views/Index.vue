@@ -8,9 +8,12 @@
                         <h2 style="font-size:30px;">Easily monetize, host and study your gaming community</h2>
                     </div>
                     <div class="mt-10">
-                        <v-btn href="https://console.purecore.io/" style="display:inline-block" variant="flat" class="mr-2" color="primary" size="large">
-                            Go To Console
-                        </v-btn>
+                        <a href="https://console.purecore.io/">
+                            <v-btn style="display:inline-block" variant="flat" class="mr-2" color="primary"
+                                size="large">
+                                Go To Console
+                            </v-btn>
+                        </a>
                         <v-btn style="display:inline-block" variant="text" color="primary" size="large">
                             Compare with competing services
                         </v-btn>
