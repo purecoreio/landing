@@ -35,7 +35,6 @@ export default {
                 }
             ]
         }
-        console.log(this.$refs.chart)
         new Chart(this.$refs.chart, {
             title: "My Awesome Chart",
             data: data,
