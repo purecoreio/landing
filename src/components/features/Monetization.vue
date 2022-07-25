@@ -20,7 +20,8 @@ export default {
     data: () => ({
         code: ""
     }),
-    mounted() {
+    async mounted() {
+        await this.wait(400)
         this.typewrite(`import { Checkout } from 'purecore'
 
 const checkout = await Checkout.create({
