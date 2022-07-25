@@ -51,7 +51,7 @@ export default {
     mounted() {
         setInterval(async () => {
             await this.switch();
-        }, 1000 * 5);
+        }, 1000 * 8);
     },
     components: { Analytics, Hosting, Monetization }
 }
