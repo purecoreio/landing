@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar style="overflow:visible" flat border="b" app class="py-0">
+    <v-app-bar style="overflow:visible" flat border="b" app class="py-0 pl-2">
         <router-link style="text-decoration:none;color:initial" to="/">
             <Logo />
         </router-link>
@@ -14,11 +14,17 @@
             </template>
         </vsm-menu>
         <v-spacer />
-        <v-btn to="/discord" class="mr-3">
-            Discord
+        <v-btn color="grey" icon to="/discord" class="mr-3">
+            <v-icon icon="mdi-discord" />
+            <v-tooltip location="bottom" activator="parent">
+                Discord
+            </v-tooltip>
         </v-btn>
-        <v-btn href="https://docs.purecore.io" class="mr-3">
-            Docs
+        <v-btn color="grey" icon href="https://docs.purecore.io" class="mr-3">
+            <v-icon icon="mdi-apple-keyboard-command" />
+            <v-tooltip location="bottom" activator="parent">
+                Docs
+            </v-tooltip>
         </v-btn>
         <v-btn href="https://console.purecore.io" variant="flat" color="primary" append-icon="mdi-login-variant">
             Go To Console
@@ -171,8 +177,8 @@ export default {
                 ]
             },
             {
-                title: 'Identity',
-                dropdown: 'identity',
+                title: 'Website',
+                dropdown: 'website',
                 items: [
                     {
                         icon: 'mdi-account-search',

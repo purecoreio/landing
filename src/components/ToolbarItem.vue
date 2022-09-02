@@ -2,24 +2,16 @@
     <div :style="`width: ${cols * 300}px`">
         <v-row align="center">
             <v-col v-for="i in cols" :key="`${i}-${items[0].title}`">
-                <v-list-item v-for="element in items.slice(fromCol(i), toCol(i))" :key="element.title" target="_blank"
+                <v-list-item v-for="element in items.slice(fromCol(i), toCol(i))" :key="element.title" target="_blank" :title="element.title" :subtitle="element.description"
                     class="pa-5">
-                    <v-list-item-avatar color="primary">
+                    <template v-slot:prepend>
                         <v-icon v-if="element.icon">
                             {{ element.icon }}
                         </v-icon>
                         <span v-else-if="element.title">
                             {{ element.title[0] }}
                         </span>
-                    </v-list-item-avatar>
-                    <div class="pl-5">
-                        <v-list-item-title>
-                            {{ element.title }}
-                        </v-list-item-title>
-                        <v-list-item-subtitle>
-                            {{ element.description }}
-                        </v-list-item-subtitle>
-                    </div>
+                    </template>
                 </v-list-item>
             </v-col>
         </v-row>
