@@ -5,7 +5,7 @@
                 allowtransparency="true" frameborder="0"
                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
             <a href="https://discord.gg/wUtrrHH6qx" target="_blank">
-                <v-btn class="my-5" size="large" color="primary" variant="flat">
+                <v-btn style="display:block" class="my-5" size="large" color="primary" variant="flat">
                     Join the nominal discord server
                 </v-btn>
             </a>
