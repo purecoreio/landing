@@ -15,7 +15,7 @@ import Toolbar from "./components/Toolbar.vue"
 export default {
   components: {
     cFooter,
-    Toolbar
+    Toolbar,
   }
 }
 </script>
