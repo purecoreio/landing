@@ -20,6 +20,13 @@ const routes = [
     },
     alias: ["/monetization", "/hosting", "/identity", "/analytics", "/community"]
   },
+  {
+    path: '/vs/:service',
+    props: true,
+    component: () => {
+      return import('../views/Compare.vue')
+    },
+  }
 ]
 
 const router = createRouter({

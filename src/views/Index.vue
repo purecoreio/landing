@@ -16,6 +16,11 @@
                         </a>
                         <v-btn style="display:inline-block" variant="text" color="primary" size="large">
                             Compare with competing services
+                            <v-menu activator="parent">
+                                <v-list>
+                                    <v-list-item :to="`/vs/${spec}`" v-for="spec in Object.keys(specs)" :key="spec" :title="specs[spec].name" />
+                                </v-list>
+                            </v-menu>
                         </v-btn>
                     </div>
                 </v-col>
@@ -69,9 +74,12 @@
 <script>
 import FeatureCheckbox from '../components/FeatureCheckbox.vue'
 import FeatureAnimation from '../components/FeatureAnimation.vue'
+import { Specs } from '../assets/specs';
 export default {
     components: { FeatureCheckbox, FeatureAnimation },
-
+    data: () => ({
+        specs: Specs.others
+    })
 }
 </script>
 <style scoped>
