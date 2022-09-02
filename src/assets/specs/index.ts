@@ -2,7 +2,7 @@ import { Minetrends } from "./analytics/Minetrends";
 import { Plan } from "./analytics/Plan";
 import { Hetzner } from "./hosting/Hetzner";
 import { PebbleHost } from "./hosting/PebbleHost";
-import { CraftingStore } from "./monetization/Craftingstore";
+import { CraftingStore } from "./monetization/CraftingStore";
 import { Tebex } from "./monetization/Tebex";
 import { Ours } from "./Ours";
 
@@ -11,7 +11,7 @@ export const Specs = {
     others: {
         tebex: Tebex,
         craftingstore: CraftingStore,
-        pebbleHost: PebbleHost,
+        pebblehost: PebbleHost,
         hetzner: Hetzner,
         minetrends: Minetrends,
         plan: Plan
