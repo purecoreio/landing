@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar style="overflow:visible" flat border="b" app class="py-0 pl-2">
+    <v-app-bar v-if="false" style="overflow:visible" flat border="b" app class="py-0 pl-2">
         <router-link style="text-decoration:none;color:initial" to="/">
             <Logo />
         </router-link>
