@@ -33,12 +33,16 @@
             <v-divider />
         </div>
     </v-card>
-    <v-alert v-if="selected" variant="text" class="text-center">
-        Disclaimer: this information may not be up to date. always check deals on {{ selectedSpec.name }}
-        ({{ selectedSpec.url }}). We are happy to have competition from anybody, and this page doesn't mean to
-        disrespect {{ selectedSpec.name }}'s work. If you believe this information is wrong, please, publish a
-        PR <a target="_blank" class="text-black"
-            href="https://github.com/purecoreio/landing/tree/main/src/assets/specs">here</a>.
+    <v-alert v-if="selected" variant="text" class="text-center" color="grey">
+        <small>
+            <b>Disclaimer:</b> this information may not be up to date. <b>always check deals on {{ selectedSpec.name }}
+                (<u>{{ selectedSpec.url }}</u>)
+                before making a decision</b>. We are happy to have competition from anybody, and this page doesn't mean
+            to
+            disrespect {{ selectedSpec.name }}'s work. If you believe this information is wrong, please, publish a
+            PR <a target="_blank" class="text-grey"
+                href="https://github.com/purecoreio/landing/tree/main/src/assets/specs">here</a>.
+        </small>
     </v-alert>
 </template>
 
