@@ -1,6 +1,7 @@
 import { Integration, Spec } from "./Spec";
 
 export const Ours: Spec = {
+    id: 'purecore',
     name: 'purecore.io',
     url: "http://purecore.io/",
     developerTooling: Integration.YES,

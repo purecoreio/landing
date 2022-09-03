@@ -8,6 +8,8 @@ export enum Integration {
 
 export type Spec = {
 
+    id: string,
+    preferred?: 'monetization' | 'hosting' | 'website' | 'community'
     name: string,
     akas?: string[],
     url: string,
