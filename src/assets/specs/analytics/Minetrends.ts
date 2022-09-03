@@ -1,6 +1,8 @@
 import { Integration, Spec } from "../Spec";
 
 export const Minetrends: Spec = {
+    id: 'minetrends',
+    preferred: 'community',
     name: 'Minetrends',
     url: "https://minetrends.com/",
     community: {

@@ -1,6 +1,8 @@
 import { Integration, Spec } from "../Spec";
 
 export const Tebex: Spec = {
+    id: 'tebex',
+    preferred: 'monetization',
     name: 'tebex.io',
     akas: ['Buycraft'],
     url: "https://tebex.io/",

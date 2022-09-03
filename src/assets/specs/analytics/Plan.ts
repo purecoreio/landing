@@ -1,6 +1,8 @@
 import { Integration, Spec } from "../Spec";
 
 export const Plan: Spec = {
+    id: 'plan',
+    preferred: 'community',
     name: 'Plan | Player Analytics',
     url: "https://github.com/plan-player-analytics/Plan",
     developerTooling: Integration.YES,

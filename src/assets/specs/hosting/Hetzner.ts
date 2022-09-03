@@ -1,6 +1,8 @@
 import { Integration, Spec } from "../Spec";
 
 export const Hetzner: Spec = {
+    id: 'hetzner',
+    preferred: 'hosting',
     name: 'Hetzner',
     url: "https://www.hetzner.com/",
     hosting: {

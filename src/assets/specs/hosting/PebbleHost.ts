@@ -1,6 +1,8 @@
 import { Integration, Spec } from "../Spec";
 
 export const PebbleHost: Spec = {
+    id: 'pebblehost',
+    preferred: 'hosting',
     name: 'PebbleHost',
     url: "https://pebblehost.com/",
     developerTooling: Integration.YES,

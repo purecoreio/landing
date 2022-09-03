@@ -1,6 +1,8 @@
 import { Integration, Spec } from "../Spec";
 
 export const CraftingStore: Spec = {
+    id: 'craftingstore',
+    preferred: 'monetization',
     name: 'CraftingStore',
     url: "https://craftingstore.net/",
     developerTooling: Integration.PARTIAL,
