@@ -18,7 +18,7 @@ const routes = [
     component: () => {
       return import('../views/placeholders/UnderConstruction.vue')
     },
-    alias: ["/monetization", "/hosting", "/identity", "/analytics", "/community"]
+    alias: ["/monetization", "/hosting", "/website", "/analytics", "/community"]
   },
   {
     path: '/vs/:service',
