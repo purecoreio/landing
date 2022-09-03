@@ -19,7 +19,6 @@
     "v-smooth-scroll": "^2.0.0-beta.2",
     "vue": "^3.2.25",
     "vue-gtag": "^2.0.1",
-    "vue-meta": "^3.0.0-alpha.2",
     "vue-prism-editor": "^2.0.0-alpha.2",
     "vue-router": "^4.0.3",
     "vue-stripe-menu": "^2.1.1",
