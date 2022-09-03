@@ -28,7 +28,7 @@ const routes = [
     },
   },
   {
-    path: '/:catchAll(.*)*',
+    path: '/:catchAll(.*)',
     component: () => {
       return import('../views/placeholders/404.vue')
     },
