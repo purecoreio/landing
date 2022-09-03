@@ -8,12 +8,12 @@ import { Ours } from "./Ours";
 
 export const Specs = {
     ours: Ours,
-    others: {
-        tebex: Tebex,
-        craftingstore: CraftingStore,
-        pebblehost: PebbleHost,
-        hetzner: Hetzner,
-        minetrends: Minetrends,
-        plan: Plan
-    }
+    others: [
+        Tebex,
+        CraftingStore,
+        PebbleHost,
+        Hetzner,
+        Minetrends,
+        Plan
+    ]
 }
