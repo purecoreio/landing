@@ -11,8 +11,8 @@
                     {{ specs.ours.name }}
                 </v-col>
                 <v-col cols="3" md="2" class="text-center">
-                    <v-select theme="dark" hide-details variant="solo" v-model="selected" :items="competingServices"
-                        desnsity="compact" single-line item-title="display" item-value="key" />
+                    <v-select theme="dark" hide-details variant="solo" v-model="selected" :items="this.specs?.others"
+                        desnsity="compact" single-line item-title="name" item-value="id" />
                 </v-col>
             </v-row>
         </v-card>
@@ -56,6 +56,7 @@ export default {
     watch: {
         selected(val) {
             this.$emit('update:modelValue', val)
+            if (this.selectedSpec.preferred) this.product = this.selectedSpec.preferred
         }
     },
     components: { Integration },
@@ -64,14 +65,6 @@ export default {
         this.selected = this.modelValue
     },
     computed: {
-        competingServices() {
-            return this.specs?.others.map(s => {
-                return {
-                    key: s.id,
-                    display: s.name
-                }
-            }) ?? []
-        },
         selectedSpec() {
             if (!this.selected) return null
             return this.specs.others.find(s => s.id == this.selected)
