@@ -14,7 +14,7 @@
                                 Go To Console
                             </v-btn>
                         </a>
-                        <v-btn style="display:inline-block" variant="text" color="primary" size="large">
+                        <!--<v-btn style="display:inline-block" variant="text" color="primary" size="large">
                             Compare with competing services
                             <v-menu v-if="specs" activator="parent">
                                 <v-list>
@@ -22,7 +22,7 @@
                                         :title="spec.name" />
                                 </v-list>
                             </v-menu>
-                        </v-btn>
+                        </v-btn>-->
                     </div>
                 </v-col>
                 <v-spacer />
