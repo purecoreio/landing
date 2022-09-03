@@ -8,7 +8,7 @@
                 reduced price, with a single subscription.
             </h3>
         </div>
-        <compare-table v-model="service" />
+        <compare-table v-if="service" v-model="service" />
     </v-container>
 </template>
 
@@ -16,7 +16,12 @@
 import { Specs } from '../assets/specs';
 import CompareTable from '../components/compare/CompareTable.vue';
 export default {
-    props: ["service"],
+    props: {
+        service: {
+            type: String,
+            default: null
+        }
+    },
     components: { CompareTable },
     data: () => ({
         specs: Specs.others,
