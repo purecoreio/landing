@@ -8,6 +8,7 @@
     <v-chip v-else color="red" append-icon="mdi-close" text="missing"/>
 </template>
 
+
 <script>
 /*
     PARTIAL = 0,
