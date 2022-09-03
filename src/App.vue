@@ -2,9 +2,6 @@
   <v-app>
     <v-main>
       <toolbar />
-      <v-alert>
-        uhm, hey?
-      </v-alert>
       <router-view />
     </v-main>
     <c-footer />

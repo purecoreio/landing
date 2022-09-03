@@ -26,6 +26,12 @@ const routes = [
     component: () => {
       return import('../views/Compare.vue')
     },
+  },
+  {
+    path: '/:catchAll(.*)*',
+    component: () => {
+      return import('../views/placeholders/404.vue')
+    },
   }
 ]
 
