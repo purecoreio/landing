@@ -26,7 +26,7 @@
                         <integration :val="specs.ours[product][feature]" />
                     </v-col>
                     <v-col cols="3" md="2" class="text-center">
-                        <integration v-if="selected" :val="specs.others[selected]?.[product]?.[feature]" />
+                        <integration v-if="selected" :val="selectedSpec[product]?.[feature]" />
                     </v-col>
                 </v-row>
             </div>
@@ -34,10 +34,11 @@
         </div>
     </v-card>
     <v-alert v-if="selected" variant="text" class="text-center">
-        Disclaimer: this information may not be up to date. always check deals on {{ specs.others[selected].name }}
-        ({{ specs.others[selected].url }}). We are happy to have competition from anybody, and this page doesn't mean to
-        disrespect {{ specs.others[selected].name }}'s work. If you believe this information is wrong, please, publish a
-        PR <a target="_blank" class="text-black" href="https://github.com/purecoreio/landing/tree/main/src/assets/specs">here</a>.
+        Disclaimer: this information may not be up to date. always check deals on {{ selectedSpec.name }}
+        ({{ selectedSpec.url }}). We are happy to have competition from anybody, and this page doesn't mean to
+        disrespect {{ selectedSpec.name }}'s work. If you believe this information is wrong, please, publish a
+        PR <a target="_blank" class="text-black"
+            href="https://github.com/purecoreio/landing/tree/main/src/assets/specs">here</a>.
     </v-alert>
 </template>
 
@@ -64,13 +65,16 @@ export default {
     },
     computed: {
         competingServices() {
-            return Object.keys(this.specs.others).map(s => {
-                const spec = this.specs.others[s]
+            return this.specs?.others.map(s => {
                 return {
-                    key: s,
-                    display: spec.name
+                    key: s.id,
+                    display: s.name
                 }
-            })
+            }) ?? []
+        },
+        selectedSpec() {
+            if (!this.selected) return null
+            return this.specs.others.find(s => s.id == this.selected)
         }
     }
 }
