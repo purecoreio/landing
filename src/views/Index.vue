@@ -14,7 +14,6 @@
                                 Go To Console
                             </v-btn>
                         </a>
-                        {{ specs }}
                         <v-btn style="display:inline-block" variant="text" color="primary" size="large">
                             Compare with competing services
                             <v-menu activator="parent">
