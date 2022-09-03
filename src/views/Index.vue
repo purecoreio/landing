@@ -15,15 +15,15 @@
                             </v-btn>
                         </a>
                         {{ specs }}
-                        <!--<v-btn style="display:inline-block" variant="text" color="primary" size="large">
+                        <v-btn style="display:inline-block" variant="text" color="primary" size="large">
                             Compare with competing services
-                            <v-menu v-if="specs" activator="parent">
+                            <v-menu activator="parent">
                                 <v-list>
-                                    <v-list-item :to="`/vs/${spec.id}`" v-for="spec in specs" :key="spec"
+                                    <v-list-item :to="`/vs/${spec.id}`" v-for="spec in specs" :key="spec.id"
                                         :title="spec.name" />
                                 </v-list>
                             </v-menu>
-                        </v-btn>-->
+                        </v-btn>
                     </div>
                 </v-col>
                 <v-spacer />
