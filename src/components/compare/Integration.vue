@@ -5,7 +5,7 @@
     <v-chip v-else-if="val == 3" color="primary" append-icon="mdi-check" text="Complete, Paid" />
     <v-chip v-else-if="val == 4" color="success" append-icon="mdi-progress-check" text="Planned" />
     <v-chip v-else-if="val" color="black" variant="flat" prepend-icon="mdi-approximately-equal">{{ val }} €</v-chip>
-    <v-chip v-else color="red" append-icon="mdi-close" text="missing"/>
+    <v-chip v-else color="red" append-icon="mdi-close" text="missing" />
 </template>
 
 <script>
@@ -17,6 +17,11 @@
     PLANNED = 4
 */
 export default {
-    props: ["val"]
+    props: {
+        val: {
+            type: Number,
+            default: null
+        }
+    }
 }
 </script>

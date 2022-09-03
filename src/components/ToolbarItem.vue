@@ -19,7 +19,12 @@
 </template>
 <script>
 export default {
-    props: ["items"],
+    props: {
+        items: {
+            type: Object,
+            default: []
+        }
+    },
     computed: {
         cols() {
             return this.items.length >= 4 ? 2 : 1
