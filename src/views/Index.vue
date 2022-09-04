@@ -82,7 +82,7 @@ export default {
         specs() {
             return Specs?.others ?? []
         }
-    }
+    },
 }
 </script>
 <style scoped>
