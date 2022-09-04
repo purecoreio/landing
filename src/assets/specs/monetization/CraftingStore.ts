@@ -10,6 +10,8 @@ export const CraftingStore: Spec = {
         directFunds: Integration.YES,
         worldwidePaymentsProcessing: Integration.YES,
         unlimitedPackages: Integration.YES,
+        multipleServerSupport: Integration.YES,
+        multipleGameSupport: Integration.YES,
         discordSupport: Integration.YES,
         sales: Integration.YES_PAID,
         coupons: Integration.YES,
