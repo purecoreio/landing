@@ -180,54 +180,6 @@ export default {
                 ]
             },
             {
-                title: 'Analytics',
-                dropdown: 'analytics',
-                items: [
-                    {
-                        icon: 'mdi-google-circles-communities',
-                        title: 'Community Analytics',
-                        description: 'See how your community is evolving with analytics about growth, playtime, anonimized geolocatio and more',
-
-
-                    },
-                    {
-                        icon: 'mdi-account',
-                        title: 'Player Analytics',
-                        description: 'We provide meaningful and respectful analytics about individual players and their presence',
-
-
-                    },
-                    {
-                        icon: 'mdi-vote',
-                        title: 'Vote Analytics',
-                        description: 'Track your network votes on server lists to help you understand how your voting score is evolving',
-
-
-                    },
-                    {
-                        icon: 'mdi-web',
-                        title: 'Website Analytics',
-                        description: 'Understand how your website is used by your players, integrate external services and increase page visits',
-
-
-                    },
-                    {
-                        icon: 'mdi-server',
-                        title: 'Instance Analytics',
-                        description: 'Learn how your players navigate your network and how your gamemodes are being played',
-
-
-                    },
-                    {
-                        icon: 'mdi-memory',
-                        title: 'Infrastructure Analytics',
-                        description: 'Use purecore hosting or self-host purecore supervisor to track your infrastructure performance',
-
-
-                    },
-                ]
-            },
-            {
                 title: 'Community',
                 dropdown: 'community',
                 items: [
@@ -284,6 +236,54 @@ export default {
                         icon: 'mdi-emoticon-wink',
                         title: 'Network Profiles',
                         description: 'Players can customize their profile to make it unique on your network',
+
+
+                    },
+                ]
+            },
+            {
+                title: 'Analytics',
+                dropdown: 'analytics',
+                items: [
+                    {
+                        icon: 'mdi-google-circles-communities',
+                        title: 'Community Analytics',
+                        description: 'See how your community is evolving with analytics about growth, playtime, anonimized geolocatio and more',
+
+
+                    },
+                    {
+                        icon: 'mdi-account',
+                        title: 'Player Analytics',
+                        description: 'We provide meaningful and respectful analytics about individual players and their presence',
+
+
+                    },
+                    {
+                        icon: 'mdi-vote',
+                        title: 'Vote Analytics',
+                        description: 'Track your network votes on server lists to help you understand how your voting score is evolving',
+
+
+                    },
+                    {
+                        icon: 'mdi-web',
+                        title: 'Website Analytics',
+                        description: 'Understand how your website is used by your players, integrate external services and increase page visits',
+
+
+                    },
+                    {
+                        icon: 'mdi-server',
+                        title: 'Instance Analytics',
+                        description: 'Learn how your players navigate your network and how your gamemodes are being played',
+
+
+                    },
+                    {
+                        icon: 'mdi-memory',
+                        title: 'Infrastructure Analytics',
+                        description: 'Use purecore hosting or self-host purecore supervisor to track your infrastructure performance',
 
 
                     },
