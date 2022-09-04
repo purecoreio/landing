@@ -2,13 +2,13 @@
     <v-container>
         <hero>
             <template v-slot:title>
-                Hosting
+                Website
             </template>
             <template v-slot:description>
-                True dedicated vCPUs for the price of shared vCPUs. Autoscaling. Detailed hardware information. You
-                won't find cheaper prices for dedicated vCPUs anywhere else; our profit margin is crazy thin, we
-                cover some expenses with purecore+ subscriptions — a business model you won't find on any of the
-                existing competing services.
+                Build your website in the very same way you are used to, reuse your bought templates
+                compatible competing with services here! You can also integrate every piece of purecore tech on your custom
+                built website by using elements, which help you cover everything from checkout pages to player
+                authentication on your externally hosted website.
             </template>
         </hero>
         <compare-table modelValue="pebblehost" />
