@@ -1,8 +1,8 @@
 <template>
     <v-app-bar style="overflow:visible" flat border="b" app class="py-0 pl-2" absolute>
-        <!--<router-link style="text-decoration:none;color:initial" to="/">
+        <router-link style="text-decoration:none;color:initial" to="/">
             <logo />
-        </router-link>-->
+        </router-link>
         <hover-menu :menu="menu" />
         <v-spacer />
         <v-btn color="grey" icon to="/discord" class="mr-3">
@@ -25,8 +25,10 @@
 <script>
 import HoverMenu from './HoverMenu.vue';
 
+import Logo from './Logo.vue';
 export default {
     components: {
+        Logo,
         HoverMenu,
     },
     data: () => ({
