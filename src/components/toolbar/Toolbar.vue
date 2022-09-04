@@ -34,8 +34,8 @@ export default {
     data: () => ({
         menu: [
             {
-                title: 'Monetization',
-                dropdown: 'monetization',
+                title: 'Commerce',
+                dropdown: 'commerce',
                 items: [
                     {
                         icon: 'mdi-currency-eur',

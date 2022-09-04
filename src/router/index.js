@@ -2,33 +2,53 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/', name: 'home',
+    path: '/',
     component: () => {
       return import('../views/Index.vue')
     },
   },
   {
-    path: '/discord', name: 'discord',
+    path: '/discord',
     component: () => {
       return import('../views/media/Discord.vue')
     },
   },
+  // products
   {
-    path: '/unavailable', name: 'unavailable',
+    path: '/commerce',
     component: () => {
-      return import('../views/placeholders/UnderConstruction.vue')
+      return import('../views/products/Commerce.vue')
     },
-    alias: ["/monetization", "/hosting", "/website", "/analytics", "/community"]
   },
   {
-    path: '/vs/:service', name: 'vs',
+    path: '/hosting',
+    component: () => {
+      return import('../views/products/Hosting.vue')
+    },
+  },
+  {
+    path: '/website',
+    component: () => {
+      return import('../views/products/Website.vue')
+    },
+  },
+  {
+    path: '/community',
+    component: () => {
+      return import('../views/products/Community.vue')
+    },
+  },
+  // vs
+  {
+    path: '/vs/:service',
     props: true,
     component: () => {
       return import('../views/Compare.vue')
     },
   },
+  // placeholders
   {
-    path: '/:catchAll(.*)', name: '404',
+    path: '/:catchAll(.*)',
     component: () => {
       return import('../views/placeholders/404.vue')
     },
