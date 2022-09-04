@@ -2,33 +2,33 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/',
+    path: '/', name: 'home',
     component: () => {
       return import('../views/Index.vue')
     },
   },
   {
-    path: '/discord',
+    path: '/discord', name: 'discord',
     component: () => {
       return import('../views/media/Discord.vue')
     },
   },
   {
-    path: '/unavailable',
+    path: '/unavailable', name: 'unavailable',
     component: () => {
       return import('../views/placeholders/UnderConstruction.vue')
     },
     alias: ["/monetization", "/hosting", "/website", "/analytics", "/community"]
   },
   {
-    path: '/vs/:service',
+    path: '/vs/:service', name: 'vs',
     props: true,
     component: () => {
       return import('../views/Compare.vue')
     },
   },
   {
-    path: '/:catchAll(.*)',
+    path: '/:catchAll(.*)', name: '404',
     component: () => {
       return import('../views/placeholders/404.vue')
     },
