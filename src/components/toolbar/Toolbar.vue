@@ -26,7 +26,6 @@ import Logo from './Logo.vue';
 export default {
     components: {
         Logo,
-        HoverMenu,
     },
     data: () => ({
         menu: [
