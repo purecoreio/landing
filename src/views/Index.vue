@@ -71,8 +71,8 @@
     </v-sheet>
 </template>
 <script>
-import FeatureCheckbox from '../components/FeatureCheckbox.vue'
-import FeatureAnimation from '../components/FeatureAnimation.vue'
+import FeatureCheckbox from '../components/feature/FeatureCheckbox.vue'
+import FeatureAnimation from '../components/feature/FeatureAnimation.vue'
 import { Specs } from '../assets/specs';
 export default {
     components: { FeatureCheckbox, FeatureAnimation },
