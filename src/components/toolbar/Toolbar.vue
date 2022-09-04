@@ -3,6 +3,7 @@
         <router-link style="text-decoration:none;color:initial" to="/">
             <Logo />
         </router-link>
+        <hover-menu :menu="menu" />
         <v-spacer />
         <v-btn color="grey" icon to="/discord" class="mr-3">
             <v-icon icon="mdi-discord" />
@@ -28,6 +29,7 @@ import Logo from './Logo.vue';
 export default {
     components: {
         Logo,
+        HoverMenu,
     },
     data: () => ({
         menu: [

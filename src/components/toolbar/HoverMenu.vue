@@ -1,10 +1,10 @@
 <template>
     <vsm-menu :menu="menu" element="header" handler="hover" :screen-offset="10" :dropdown-offset="10">
-        <template #default="{ item }">
-            <toolbar-item :items="item.items" />
+        <template v-slot="{ item }">
+            <toolbar-item :items="item?.items ?? []" />
         </template>
-        <template #title="data">
-            <router-link class="navlink" :to="`/${data.item.dropdown}`">
+        <template v-slot:title="data">
+            <router-link class="navlink" :to="`/${data?.item?.dropdown ?? ''}`">
                 {{ data.item.title }}
             </router-link>
         </template>
@@ -39,6 +39,6 @@ export default {
         VsmMob,
         ToolbarItem
     },
-props:["menu"],
+    props:["menu"],
 }
 </script>
