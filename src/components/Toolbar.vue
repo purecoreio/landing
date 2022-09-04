@@ -3,7 +3,7 @@
         <router-link style="text-decoration:none;color:initial" to="/">
             <Logo />
         </router-link>
-        <!--<vsm-menu :menu="menu" element="header" handler="hover" :screen-offset="10" :dropdown-offset="10">
+        <vsm-menu :menu="menu" element="header" handler="hover" :screen-offset="10" :dropdown-offset="10">
             <template #default="{ item }">
                 <toolbar-item :items="item.items" />
             </template>
@@ -12,7 +12,7 @@
                     {{ data.item.title }}
                 </router-link>
             </template>
-        </vsm-menu>-->
+        </vsm-menu>
         <v-spacer />
         <v-btn color="grey" icon to="/discord" class="mr-3">
             <v-icon icon="mdi-discord" />
