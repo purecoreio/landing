@@ -16,6 +16,11 @@ export default {
   components: {
     cFooter,
     Toolbar,
+  },
+  mounted(){
+    setInterval(() => {
+      console.log(this.$router.currentRoute?.value)
+    }, 100);
   }
 }
 </script>
