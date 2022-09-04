@@ -33,6 +33,12 @@ const routes = [
     },
   },
   {
+    path: '/analytics',
+    component: () => {
+      return import('../views/products/Analytics.vue')
+    },
+  },
+  {
     path: '/community',
     component: () => {
       return import('../views/products/Community.vue')
