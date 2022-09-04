@@ -1,36 +1,26 @@
 {
-  "name": "dashboard",
-  "version": "0.0.1",
+  "name": "landing",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
+    "serve": "vite preview",
     "build": "vite build",
-    "serve": "vite --host",
-    "dev": "npm run serve"
+    "dev": "vite",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@mdi/font": "^6.6.96",
-    "frappe-charts": "^1.6.2",
-    "js-beautify": "^1.14.6",
-    "prismjs": "^1.29.0",
-    "vue-prism-editor": "^2.0.0-alpha.2",
-    "vue-stripe-menu": "^2.1.1"
+    "@mdi/font": "5.9.55",
+    "roboto-fontface": "*",
+    "vue": "^3.2.37",
+    "vuetify": "^3.0.0-beta.0",
+    "webfontloader": "^1.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
     "@vue/cli-plugin-router": "~5.0.0",
-    "@vue/cli-service": "^5.0.8",
-    "sass": "^1.54.8",
-    "sass-loader": "^10.3.1",
-    "vite": "^3.0.9",
-    "vite-plugin-vuetify": "^1.0.0-alpha.15",
-    "vue": "^3.2.38",
-    "vue-cli-plugin-vuetify": "~2.4.8",
-    "vue-router": "^4.1.5",
-    "vuetify": "^3.0.0-beta.10",
-    "vuetify-loader": "^2.0.0-alpha.9"
+    "vite": "^3.0.8",
+    "vite-plugin-vuetify": "^1.0.0-alpha.12",
+    "vue-cli-plugin-vuetify": "~2.5.5"
   },
-  "engines": {
-    "node": "16.15.1",
-    "npm": "8.11.0"
-  }
+  "type": "module"
 }
