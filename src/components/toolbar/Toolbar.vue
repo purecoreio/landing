@@ -3,7 +3,8 @@
         <router-link style="text-decoration:none;color:initial" to="/">
             <Logo />
         </router-link>
-        <v-spacer />
+        <hover-menu :menu="menu" />
+        <!--<v-spacer />
         <v-btn color="grey" icon to="/discord" class="mr-3">
             <v-icon icon="mdi-discord" />
             <v-tooltip location="bottom" activator="parent">
@@ -18,14 +19,17 @@
         </v-btn>
         <v-btn href="https://console.purecore.io" variant="flat" color="primary" append-icon="mdi-login-variant">
             Go To Console
-        </v-btn>
+        </v-btn>-->
     </v-app-bar>
 </template>
 <script>
+import HoverMenu from './HoverMenu.vue';
+
 import Logo from './Logo.vue';
 export default {
     components: {
         Logo,
+        HoverMenu,
     },
     data: () => ({
         menu: [
