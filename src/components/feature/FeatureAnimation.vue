@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import Analytics from './features/Analytics.vue'
-import Hosting from './features/Hosting.vue';
-import Monetization from './features/Monetization.vue';
+import Analytics from '../features/Analytics.vue'
+import Hosting from '../features/Hosting.vue';
+import Monetization from '../features/Monetization.vue';
 export default {
     data: () => ({
         swithing: false,
