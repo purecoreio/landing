@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import "./assets/styles/main.css"
+import "./style.css"
 import cFooter from "./components/Footer.vue"
 export default {
   components: {
