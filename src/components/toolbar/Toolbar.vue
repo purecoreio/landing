@@ -1,8 +1,8 @@
 <template>
-    <v-app-bar style="overflow:visible" flat border="b" app class="py-0 pl-2">
-        <router-link style="text-decoration:none;color:initial" to="/">
+    <v-app-bar style="overflow:visible" flat border="b" app class="py-0 pl-2" absolute>
+        <!--<router-link style="text-decoration:none;color:initial" to="/">
             <Logo />
-        </router-link>
+        </router-link>-->
         <hover-menu :menu="menu" />
         <!--<v-spacer />
         <v-btn color="grey" icon to="/discord" class="mr-3">
