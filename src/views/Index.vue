@@ -30,16 +30,14 @@
                     <feature-animation />
                 </v-col>
             </v-row>
-            <div class="mt-10">
+            <div class="mt-10 text-center">
                 <a style="text-decoration:none;color:gray" href="#more">
-                    <center>
-                        <p class="mb-5">
-                            Learn more
-                        </p>
-                        <v-icon class="animated-down">
-                            mdi-chevron-down
-                        </v-icon>
-                    </center>
+                    <p class="mb-5">
+                        Learn more
+                    </p>
+                    <v-icon class="animated-down">
+                        mdi-chevron-down
+                    </v-icon>
                 </a>
             </div>
         </v-container>
