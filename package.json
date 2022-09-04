@@ -9,9 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mdi/font": "5.9.55",
+    "@mdi/font": "^5.9.55",
+    "frappe-charts": "^1.6.2",
+    "js-beautify": "^1.14.6",
+    "prismjs": "^1.29.0",
     "roboto-fontface": "*",
     "vue": "^3.2.37",
+    "vue-prism-editor": "^2.0.0-alpha.2",
+    "vue-router": "^4.1.5",
+    "vue-stripe-menu": "^2.1.1",
     "vuetify": "^3.0.0-beta.0",
     "webfontloader": "^1.0.0"
   },

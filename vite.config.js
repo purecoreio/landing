@@ -6,8 +6,16 @@ import vuetify from 'vite-plugin-vuetify'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-		vue(),
+	plugins: [
+		vue({
+			template: {
+				transformAssetUrls: {
+					tags: {
+						'v-img': ['src'],
+					}
+				}
+			}
+		}),
 		vuetify({ autoImport: true }),
-	]
+	],
 })
