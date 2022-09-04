@@ -3,16 +3,6 @@
         <router-link style="text-decoration:none;color:initial" to="/">
             <Logo />
         </router-link>
-        <vsm-menu :menu="menu" element="header" handler="hover" :screen-offset="10" :dropdown-offset="10">
-            <template #default="{ item }">
-                <toolbar-item :items="item.items" />
-            </template>
-            <template #title="data">
-                <router-link class="navlink" :to="`/${data.item.dropdown}`">
-                    {{ data.item.title }}
-                </router-link>
-            </template>
-        </vsm-menu>
         <v-spacer />
         <v-btn color="grey" icon to="/discord" class="mr-3">
             <v-icon icon="mdi-discord" />
@@ -31,34 +21,13 @@
         </v-btn>
     </v-app-bar>
 </template>
-<style>
-.navlink {
-    text-decoration: none !important;
-    color: inherit;
-}
-
-.vsm-link {
-    color: black;
-}
-
-.vsm-link.vsm-active,
-.vsm-link:hover,
-.navlink.router-link-exact-active {
-    color: #448aff
-}
-</style>
 <script>
-import 'vue-stripe-menu/dist/vue-stripe-menu.css';
-import { VsmMenu, VsmMob } from 'vue-stripe-menu'
+import HoverMenu from './HoverMenu.vue';
 
 import Logo from './Logo.vue';
-import ToolbarItem from './ToolbarItem.vue';
 export default {
     components: {
         Logo,
-        VsmMenu,
-        VsmMob,
-        ToolbarItem
     },
     data: () => ({
         menu: [
@@ -73,7 +42,7 @@ export default {
 
                     },
                     {
-                        icon: 'mdi-application-outline',
+                        icon: 'mdi-application',
                         title: 'Website',
                         description: 'Use already owned templates with the legacy CMS or use elements on your website',
 
@@ -282,7 +251,7 @@ export default {
 
                     },
                     {
-                        icon: 'mdi-bell-badge',
+                        icon: 'mdi-bell',
                         title: 'Notifications',
                         description: 'Notify your players about updates and upcoming events via both push and email',
 
