@@ -1,25 +1,50 @@
 <template>
-    <v-app-bar style="overflow:visible" flat border="b" app class="py-0 pl-2" absolute>
-        <router-link style="text-decoration:none;color:initial" to="/">
-            <logo />
-        </router-link>
-        <hover-menu :menu="menu" />
-        <v-spacer />
-        <v-btn color="grey" icon to="/discord" class="mr-3">
-            <v-icon icon="mdi-discord" />
-            <v-tooltip location="bottom" activator="parent">
-                Discord
-            </v-tooltip>
-        </v-btn>
-        <v-btn color="grey" icon href="https://docs.purecore.io" class="mr-3">
-            <v-icon icon="mdi-apple-keyboard-command" />
-            <v-tooltip location="bottom" activator="parent">
-                Docs
-            </v-tooltip>
-        </v-btn>
-        <v-btn href="https://console.purecore.io" variant="flat" color="primary" append-icon="mdi-login-variant">
-            Go To Console
-        </v-btn>
+    <v-navigation-drawer v-model="drawer" app temporary>
+        <v-list nav class="my-2" color="primary">
+            <v-list-item class="py-5" :to="item.dropdown" v-for="item in menu" :key="item.title">
+                {{item.title}}
+            </v-list-item>
+        </v-list>
+        <template v-slot:append>
+            <v-list nav class="my-2" color="primary">
+                <v-list-item prepend-icon="mdi-discord" class="py-5" to="/discord">
+                    Discord
+                </v-list-item>
+                <v-list-item prepend-icon="mdi-apple-keyboard-command" class="py-5" href="https://docs.purecore.io">
+                    Docs
+                </v-list-item>
+            </v-list>
+        </template>
+    </v-navigation-drawer>
+    <v-app-bar style="overflow:visible" flat border="b" app absolute>
+        <v-container class="d-flex align-center">
+            <v-app-bar-nav-icon class="mr-2" v-if="$vuetify.display.mobile" @click="drawer=true" />
+            <router-link style="text-decoration:none;color:initial" to="/">
+                <logo />
+            </router-link>
+            <hover-menu class="d-none d-lg-block" :menu="menu" />
+            <v-spacer />
+            <template v-if="!$vuetify.display.mobile">
+                <v-btn color="grey" icon to="/discord" class="mr-3">
+                    <v-icon icon="mdi-discord" />
+                    <v-tooltip location="bottom" activator="parent">
+                        Discord
+                    </v-tooltip>
+                </v-btn>
+                <v-btn color="grey" icon href="https://docs.purecore.io" class="mr-3">
+                    <v-icon icon="mdi-apple-keyboard-command" />
+                    <v-tooltip location="bottom" activator="parent">
+                        Docs
+                    </v-tooltip>
+                </v-btn>
+            </template>
+            <v-btn href="https://console.purecore.io" variant="flat" color="primary">
+                <span class="mr-2">
+                    <span v-if="!$vuetify.display.mobile">Go To</span> Console
+                </span>
+                <v-icon>mdi-login-variant</v-icon>
+            </v-btn>
+        </v-container>
     </v-app-bar>
 </template>
 <script>
@@ -32,6 +57,7 @@ export default {
         HoverMenu,
     },
     data: () => ({
+        drawer: false,
         menu: [
             {
                 title: 'Commerce',

@@ -1,35 +1,39 @@
 <template>
     <v-sheet>
-        <v-container>
+        <v-container class="my-10">
             <v-row align="center">
                 <v-col cols="12" md="6">
-                    <div style="padding-right:100px">
+                    <div :class="$vuetify.display.mobile ? 'text-center' : undefined">
                         <h1 style="font-size:50px;">Let's make your community <b>better</b>.</h1>
                         <h2 style="font-size:30px;">Easily monetize, host and study your gaming community</h2>
                     </div>
-                    <div class="mt-10">
-                        <a href="https://console.purecore.io/">
-                            <v-btn style="display:inline-block" variant="flat" class="mr-2" color="primary"
-                                size="large">
-                                Go To Console
+                    <v-row align="center" class="mt-10">
+                        <v-col class="text-center" cols="12" md="auto">
+                            <a href="https://console.purecore.io/">
+                                <v-btn style="display:inline-block" variant="flat" color="primary" size="large">
+                                    Go To Console
+                                </v-btn>
+                            </a>
+                        </v-col>
+                        <v-col class="text-center" cols="12" md="auto">
+                            <v-btn style="display:inline-block" variant="text" color="primary" size="large">
+                                Compare with competing services
+                                <v-menu open-on-hover activator="parent">
+                                    <v-list>
+                                        <v-list-item :to="`/vs/${spec.id}`" v-for="spec in specs" :key="spec.id"
+                                            :title="spec.name" />
+                                    </v-list>
+                                </v-menu>
                             </v-btn>
-                        </a>
-                        <v-btn style="display:inline-block" variant="text" color="primary" size="large">
-                            Compare with competing services
-                            <v-menu activator="parent">
-                                <v-list>
-                                    <v-list-item :to="`/vs/${spec.id}`" v-for="spec in specs" :key="spec.id"
-                                        :title="spec.name" />
-                                </v-list>
-                            </v-menu>
-                        </v-btn>
-                    </div>
+                        </v-col>
+                    </v-row>
                 </v-col>
                 <v-spacer />
                 <v-col cols="12" md="5">
                     <feature-animation />
                 </v-col>
             </v-row>
+            <!--
             <div class="mt-10 text-center">
                 <a style="text-decoration:none;color:gray" href="#more">
                     <p class="mb-5">
@@ -39,9 +43,15 @@
                         mdi-chevron-down
                     </v-icon>
                 </a>
-            </div>
+            </div>-->
+            <v-alert>
+                This landing page is still under construction. purecore is a huge project that is being lead by a
+                one-person team. Consider joining our Discord to keep yourself posted about upcoming open betas and
+                other testing campaigns!
+            </v-alert>
         </v-container>
     </v-sheet>
+    <!--
     <v-sheet>
         <v-container>
             <v-divider class="mt-10 mb-5" />
@@ -68,7 +78,7 @@
                 </v-col>
             </v-row>
         </v-container>
-    </v-sheet>
+    </v-sheet>-->
 </template>
 <script>
 import FeatureCheckbox from '../components/feature/FeatureCheckbox.vue'
