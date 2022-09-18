@@ -12,10 +12,14 @@
         <compare-table modelValue="plan" />
     </v-container>
 </template>
-  <script>
-  import CompareTable from '../../components/compare/CompareTable.vue'
-  import Hero from '../../components/Hero.vue';
-  export default {
+<script>
+import { useMeta } from 'vue-meta';
+import CompareTable from '../../components/compare/CompareTable.vue'
+import Hero from '../../components/Hero.vue';
+export default {
+    setup() {
+        useMeta({ title: 'Community' })
+    },
     components: { CompareTable, Hero },
-  }
-  </script>
+}
+</script>

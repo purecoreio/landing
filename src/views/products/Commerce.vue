@@ -1,22 +1,23 @@
 <template>
     <v-container>
-        <hero>
-            <template v-slot:title>
-                Commerce
-            </template>
-            <template v-slot:description>
-                Get money, get paid. Increase your revenue by saving on subscriptions you don't need; purecore offers
-                everything you'll ever need for free, plus some amazing perks with purecore+, which is way cheaper than
-                equivalent subscriptions on competing services.
-            </template>
-        </hero>
-        <compare-table modelValue="tebex" />
+        <v-row style="margin-top:120px">
+            <v-col cols="6">
+                <h1 class="text-h2">Turn your gaming community into a business</h1>
+            </v-col>
+            <v-col>
+
+            </v-col>
+        </v-row>
     </v-container>
 </template>
-  <script>
-  import CompareTable from '../../components/compare/CompareTable.vue'
-  import Hero from '../../components/Hero.vue';
-  export default {
+<script>
+import { useMeta } from 'vue-meta';
+import CompareTable from '../../components/compare/CompareTable.vue'
+import Hero from '../../components/Hero.vue';
+export default {
+    setup() {
+        useMeta({ title: 'Commerce' })
+    },
     components: { CompareTable, Hero },
-  }
-  </script>
+}
+</script>

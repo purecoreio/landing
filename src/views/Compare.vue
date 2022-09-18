@@ -15,10 +15,17 @@
 </template>
 
 <script>
+import { useMeta } from 'vue-meta';
 import { Specs } from '../assets/specs';
 import CompareTable from '../components/compare/CompareTable.vue';
 import Hero from '../components/Hero.vue';
 export default {
+    setup(props) {
+        // TODO may not work
+        const spec = Specs.others.find(s => s.id == props.service)
+        // 'monetization' | 'hosting' | 'website' | 'community'
+        useMeta({ title: `purecore.io, a better ${spec.preferred} alternative to ${spec.name}` })
+    },
     props: {
         service: {
             type: String,

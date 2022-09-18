@@ -1,4 +1,7 @@
 <template>
+  <metainfo>
+    <template v-slot:title="{ content }">{{ content ? content : `purecore.io — make your gaming community better` }}</template>
+  </metainfo>
   <v-app>
     <toolbar />
     <v-main>
@@ -12,7 +15,14 @@
 import "./style.css"
 import cFooter from "./components/Footer.vue"
 import Toolbar from "./components/toolbar/Toolbar.vue"
+import { useMeta } from "vue-meta"
 export default {
+  setup() {
+    useMeta({
+      title: '',
+      htmlAttrs: { lang: 'en', amp: true }
+    })
+  },
   components: {
     cFooter,
     Toolbar,

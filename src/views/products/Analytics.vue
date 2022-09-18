@@ -35,8 +35,12 @@
   </v-container>
 </template>
 <script>
+import { useMeta } from 'vue-meta';
 import Hero from '../../components/Hero.vue';
 export default {
+  setup () {
+    useMeta({ title: 'Analytics' })
+  },
   components: { Hero },
 }
 </script>

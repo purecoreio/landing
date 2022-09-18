@@ -15,6 +15,7 @@
     "prismjs": "^1.29.0",
     "roboto-fontface": "*",
     "vue": "^3.2.37",
+    "vue-meta": "^3.0.0-alpha.10",
     "vue-prism-editor": "^2.0.0-alpha.2",
     "vue-router": "^4.1.5",
     "vue-stripe-menu": "^2.1.1",

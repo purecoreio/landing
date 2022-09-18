@@ -1,3 +1,7 @@
+h1.heading {
+  font-family: 'Rubik Mono One', sans-serif !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
