@@ -1,5 +1,13 @@
 h1.heading {
-  font-family: 'Rubik Mono One', sans-serif !important;
+  font-size: 50px;
+}
+
+h2.heading {
+  font-size: 30px;
+}
+
+.heading {
+  font-weight: 400;
 }
 
 html {

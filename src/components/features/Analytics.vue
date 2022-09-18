@@ -1,5 +1,5 @@
 <template>
-    <div style="width:100%" ref="chart"></div>
+    <div style="width:100%;height:300px" ref="chart"></div>
 </template>
 <style>
 .chart-legend,

@@ -1,21 +1,21 @@
 <template>
-    <v-carousel :key="slide" hide-delimiters :show-arrows="false" :class="fadeClass" v-model="slide">
-        <v-carousel-item>
+    <v-window :key="slide" :show-arrows="false" :class="fadeClass" v-model="slide">
+        <v-window-item>
             <div class="d-flex fill-height justify-center align-center">
                 <Analytics />
             </div>
-        </v-carousel-item>
-        <v-carousel-item>
+        </v-window-item>
+        <v-window-item>
             <div class="d-flex fill-height justify-center align-center">
                 <Hosting />
             </div>
-        </v-carousel-item>
-        <v-carousel-item>
+        </v-window-item>
+        <v-window-item>
             <div class="d-flex fill-height justify-center align-center">
                 <Monetization />
             </div>
-        </v-carousel-item>
-    </v-carousel>
+        </v-window-item>
+    </v-window>
 </template>
 
 <script>

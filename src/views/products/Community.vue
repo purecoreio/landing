@@ -2,11 +2,14 @@
     <v-container>
         <hero>
             <template v-slot:title>
-                Community
+                The home for your community
             </template>
             <template v-slot:description>
-                Micro and macro analysis for everything related to your community, plus a complete set of engagement
-                tools to keep your players talking on Discord, playing on your server and visiting your website.
+                From hosting to monetization. This is the perfect place for your players            </template>
+            <template v-slot:display>
+                <v-card class="pa-5 text-center" variant="text">
+                    <pre>placeholder</pre> player profiles and relationships
+                </v-card>
             </template>
         </hero>
         <compare-table modelValue="plan" />
@@ -14,12 +17,13 @@
 </template>
 <script>
 import { useMeta } from 'vue-meta';
-import CompareTable from '../../components/compare/CompareTable.vue'
 import Hero from '../../components/Hero.vue';
+import Monetization from '../../components/features/Monetization.vue';
+import CompareTable from '../../components/compare/CompareTable.vue';
 export default {
     setup() {
         useMeta({ title: 'Community' })
     },
-    components: { CompareTable, Hero },
+    components: { Hero, Monetization, CompareTable },
 }
 </script>

@@ -2,13 +2,13 @@
     <v-container>
         <hero>
             <template v-slot:title>
-                Hosting
+                Unrivaled performance
             </template>
             <template v-slot:description>
-                True dedicated vCPUs for the price of shared vCPUs. Autoscaling. Detailed hardware information. You
-                won't find cheaper prices for dedicated vCPUs anywhere else; our profit margin is crazy thin, we
-                cover some expenses with purecore+ subscriptions — a business model you won't find on any of the
-                existing competing services.
+                Dedicated vCPU cores for the price of shared ones.
+            </template>
+            <template v-slot:display>
+                <hosting/>
             </template>
         </hero>
         <compare-table modelValue="pebblehost" />
@@ -16,12 +16,13 @@
 </template>
 <script>
 import { useMeta } from 'vue-meta';
-import CompareTable from '../../components/compare/CompareTable.vue'
 import Hero from '../../components/Hero.vue';
+import CompareTable from '../../components/compare/CompareTable.vue';
+import Hosting from '../../components/features/Hosting.vue';
 export default {
     setup() {
         useMeta({ title: 'Hosting' })
     },
-    components: { CompareTable, Hero },
+    components: { Hero, CompareTable, Hosting },
 }
 </script>

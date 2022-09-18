@@ -2,27 +2,27 @@
     <v-container>
         <hero>
             <template v-slot:title>
-                Website
+                Make your website your own
             </template>
             <template v-slot:description>
-                Build your website in the very same way you are used to, reuse your bought templates
-                compatible competing with services here! You can also integrate every piece of purecore tech on your
-                custom
-                built website by using elements, which help you cover everything from checkout pages to player
-                authentication on your externally hosted website.
+                Use our CMS, or integrate purecore on your website
+            </template>
+            <template v-slot:display>
+                <v-card class="pa-5 text-center" variant="text">
+                    <pre>placeholder</pre> login and payment buttons element
+                </v-card>
             </template>
         </hero>
-        <compare-table modelValue="pebblehost" />
     </v-container>
 </template>
 <script>
 import { useMeta } from 'vue-meta';
-import CompareTable from '../../components/compare/CompareTable.vue'
 import Hero from '../../components/Hero.vue';
+import CompareTable from '../../components/compare/CompareTable.vue';
 export default {
     setup() {
         useMeta({ title: 'Website' })
     },
-    components: { CompareTable, Hero },
+    components: { Hero, CompareTable },
 }
 </script>

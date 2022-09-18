@@ -2,45 +2,49 @@
   <v-container>
     <hero>
       <template v-slot:title>
-        Analytics
+        Take a deeper look into your community
       </template>
       <template v-slot:description>
-        All of our products include detailed analytics. This is not a 'separate' product, but an extension of
-        every thing purecore has to offer. You won't miss a single data point anywhere. Commerce, hosting, website and
-        community. Everything has analytics.
-        <v-row class="mt-10" align="center">
-          <v-col cols="6">
-            <v-btn block size="large" variant="flat" color="primary" to="/commerce#analytics">
-              Commerce Analytics
-            </v-btn>
-          </v-col>
-          <v-col cols="6">
-            <v-btn block size="large" variant="flat" color="primary" to="/hosting#analytics">
-              Hosting Analytics
-            </v-btn>
-          </v-col>
-          <v-col cols="6">
-            <v-btn block size="large" variant="flat" color="primary" to="/website#analytics">
-              Website Analytics
-            </v-btn>
-          </v-col>
-          <v-col cols="6">
-            <v-btn block size="large" variant="flat" color="primary" to="/community#analytics">
-              Community Analytics
-            </v-btn>
-          </v-col>
-        </v-row>
+        Make use of your data. Get detailed analytics from everything
+      </template>
+      <template v-slot:display>
+        <analytics />
       </template>
     </hero>
+    <compare-table modelValue="plan"/>
+    <v-row class="mt-10" align="center">
+      <v-col cols="6">
+        <v-btn class="py-9" block size="large" variant="flat" color="primary" to="/commerce#analytics">
+          Commerce Analytics
+        </v-btn>
+      </v-col>
+      <v-col cols="6">
+        <v-btn class="py-9" block size="large" variant="flat" color="primary" to="/hosting#analytics">
+          Hosting Analytics
+        </v-btn>
+      </v-col>
+      <v-col cols="6">
+        <v-btn class="py-9" block size="large" variant="flat" color="primary" to="/website#analytics">
+          Website Analytics
+        </v-btn>
+      </v-col>
+      <v-col cols="6">
+        <v-btn class="py-9" block size="large" variant="flat" color="primary" to="/community#analytics">
+          Community Analytics
+        </v-btn>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 <script>
 import { useMeta } from 'vue-meta';
 import Hero from '../../components/Hero.vue';
+import Analytics from '../../components/features/Analytics.vue';
+import CompareTable from '../../components/compare/CompareTable.vue';
 export default {
-  setup () {
+  setup() {
     useMeta({ title: 'Analytics' })
   },
-  components: { Hero },
+  components: { Hero, Analytics, CompareTable },
 }
 </script>
