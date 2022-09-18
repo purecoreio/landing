@@ -8,7 +8,7 @@
                 Easy payments for your players. Get money, get paid.
             </template>
             <template v-slot:display>
-                <monetization />
+                <payment/>
             </template>
         </hero>
         <compare-table modelValue="tebex" />
@@ -19,10 +19,11 @@ import { useMeta } from 'vue-meta';
 import Hero from '../../components/Hero.vue';
 import Monetization from '../../components/features/Monetization.vue';
 import CompareTable from '../../components/compare/CompareTable.vue';
+import Payment from '../../components/features/Payment.vue';
 export default {
     setup() {
         useMeta({ title: 'Commerce' })
     },
-    components: { Hero, Monetization, CompareTable },
+    components: { Hero, Monetization, CompareTable, Payment },
 }
 </script>

@@ -8,9 +8,7 @@
                 Use our CMS, or integrate purecore on your website
             </template>
             <template v-slot:display>
-                <v-card class="pa-5 text-center" variant="text">
-                    <pre>placeholder</pre> login and payment buttons element
-                </v-card>
+                <monetization />
             </template>
         </hero>
     </v-container>
@@ -19,10 +17,11 @@
 import { useMeta } from 'vue-meta';
 import Hero from '../../components/Hero.vue';
 import CompareTable from '../../components/compare/CompareTable.vue';
+import Monetization from '../../components/features/Monetization.vue';
 export default {
     setup() {
         useMeta({ title: 'Website' })
     },
-    components: { Hero, CompareTable },
+    components: { Hero, CompareTable, Monetization },
 }
 </script>
