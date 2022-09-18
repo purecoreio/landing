@@ -11,6 +11,4 @@ const app = createApp(App)
   .use(createMetaManager())
   .use(router)
   .use(vuetify)
-
-await router.isReady()
-app.mount('#app')
+  .mount('#app')
