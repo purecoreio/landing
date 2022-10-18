@@ -1,6 +1,7 @@
 <template>
   <metainfo>
-    <template v-slot:title="{ content }">{{ content ? content : `purecore.io — make your gaming community better` }}</template>
+    <template v-slot:title="{ content }">{{ content ? content : `purecore.io — make your gaming community better`
+    }}</template>
   </metainfo>
   <v-app>
     <toolbar />
