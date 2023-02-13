@@ -9,25 +9,26 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mdi/font": "^5.9.55",
+    "@mdi/font": "^7.1.96",
     "frappe-charts": "^1.6.2",
-    "js-beautify": "^1.14.6",
+    "js-beautify": "^1.14.7",
     "prismjs": "^1.29.0",
-    "roboto-fontface": "*",
-    "vue": "^3.2.37",
-    "vue-meta": "^3.0.0-alpha.10",
-    "vue-prism-editor": "^2.0.0-alpha.2",
-    "vue-router": "^4.1.5",
+    "roboto-fontface": "^0.10.0",
+    "vue": "^3.2.47",
+    "vue-meta": "3.0.0-alpha.10",
+    "vue-prism-editor": "2.0.0-alpha.2",
+    "vue-router": "^4.1.6",
     "vue-stripe-menu": "^2.1.1",
-    "vuetify": "^3.0.0-beta.0",
-    "webfontloader": "^1.0.0"
+    "vuetify": "^3.1.4",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.0.3",
-    "@vue/cli-plugin-router": "~5.0.0",
-    "vite": "^3.0.8",
-    "vite-plugin-vuetify": "^1.0.0-alpha.12",
-    "vue-cli-plugin-vuetify": "~2.5.5"
+    "@vitejs/plugin-vue": "^3.2.0",
+    "eslint": "^8.34.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "sass": "^1.58.0",
+    "vite": "^3.2.5",
+    "vite-plugin-vuetify": "^1.0.2"
   },
   "type": "module"
 }
