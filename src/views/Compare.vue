@@ -10,7 +10,7 @@
                 reduced price, with a single subscription.
             </template>
         </hero>
-        <compare-table v-if="service" v-model="service" />
+        <compare-table v-if="selectedService" v-model="selectedService" />
     </v-container>
 </template>
 
@@ -26,6 +26,9 @@ export default {
         // 'monetization' | 'hosting' | 'website' | 'community'
         useMeta({ title: `purecore.io, a better ${spec.preferred} alternative to ${spec.name}` })
     },
+    mounted(){
+        this.selectedService=this.service
+    },
     props: {
         service: {
             type: String,
@@ -35,6 +38,7 @@ export default {
     components: { CompareTable, Hero },
     data: () => ({
         specs: Specs.others,
+        selectedService:null,
     }),
     watch: {
         service(s) {

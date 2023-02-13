@@ -1,15 +1,16 @@
 /**
- * plugins/webfontloader.js
+ * plugins/webfontloader.ts
  *
  * webfontloader documentation: https://github.com/typekit/webfontloader
  */
 
 export async function loadFonts() {
   const webFontLoader = await import(/* webpackChunkName: "webfontloader" */'webfontloader')
-
   webFontLoader.load({
     google: {
-      families: ['Rubik', 'Rubik Mono One'],
+      families: [
+        'Sora', 'Jetbrains Mono'
+      ],
     },
   })
 }

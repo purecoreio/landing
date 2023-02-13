@@ -18,7 +18,7 @@
 }
 
 .vsm-link {
-    color: black;
+    color: white;
 }
 
 .vsm-link.vsm-active,

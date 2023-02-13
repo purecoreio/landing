@@ -1,5 +1,5 @@
 <template>
-    <v-card class="mb-4" color="black" variant="outlined">
+    <v-card class="mb-4" color="primary" variant="outlined">
         <v-card color="black" class="pa-5" variant="flat" :rounded="0">
             <v-row align="center">
                 <v-col cols="auto">

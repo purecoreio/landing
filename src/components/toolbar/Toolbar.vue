@@ -25,13 +25,13 @@
             <hover-menu class="d-none d-lg-block" :menu="menu" />
             <v-spacer />
             <template v-if="!$vuetify.display.mobile">
-                <v-btn color="grey" icon to="/discord" class="mr-3">
+                <!--<v-btn color="grey" icon to="/discord" class="mr-3">
                     <v-icon icon="mdi-discord" />
                     <v-tooltip location="bottom" activator="parent">
                         Discord
                     </v-tooltip>
-                </v-btn>
-                <v-btn color="grey" icon href="https://docs.purecore.io" class="mr-3">
+                </v-btn>-->
+                <v-btn icon href="https://docs.purecore.io" class="mr-3">
                     <v-icon icon="mdi-apple-keyboard-command" />
                     <v-tooltip location="bottom" activator="parent">
                         Docs

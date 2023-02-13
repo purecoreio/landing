@@ -1,5 +1,5 @@
 <template>
-    <v-card style="width:100%;height:305px" class="py-2" dark color="black" variant="flat">
+    <v-card style="width:100%;height:310px" class="py-2" dark color="black" variant="flat">
         <prism-editor v-model="code" :highlight="highlighter" line-numbers />
     </v-card>
 </template>
@@ -26,7 +26,7 @@ export default {
 
 const checkout = await Checkout.create({
     profile: {
-        eid: '8a0b22c3-f85a-4465-b0ea-732fcbcf1e86',
+        eid: 'xxxx-yyyy-zzzz',
         service: 'minecraft:java'
     },
     items: [...]

@@ -1,5 +1,5 @@
 <template>
-    <div :style="`width: ${cols * 300}px`">
+    <div :style="`width: ${cols * 300}px;`">
         <v-row align="center">
             <v-col v-for="i in cols" :key="`${i}-${items[0].title}`">
                 <v-list-item v-for="element in items.slice(fromCol(i), toCol(i))" :key="element.title" target="_blank" :title="element.title" :subtitle="element.description"

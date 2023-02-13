@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import "./style.css"
 import cFooter from "./components/Footer.vue"
 import Toolbar from "./components/toolbar/Toolbar.vue"
 import { useMeta } from "vue-meta"
