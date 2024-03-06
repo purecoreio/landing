@@ -13,7 +13,7 @@
 	>
 		<div class="flex flex-row items-center gap-2">
 			<span class="font-bold text-lg ml-2"> serverbench </span>
-			<Badge>beta</Badge>
+			<!-- <Badge>beta</Badge> -->
 		</div>
 		<Button
 			href="https://console.serverbench.io/"
